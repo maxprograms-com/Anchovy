@@ -3,10 +3,14 @@
 .gradle/
 .vscode/
 bin/
+catalog/
 conf/
 include/
 js/
 legal/
 lib/
+licenses/
 node_modules/
+srx/
+xmlfilter/
 release
