@@ -1,0 +1,12 @@
+.DS_Store
+.github/
+.gradle/
+.vscode/
+bin/
+conf/
+include/
+js/
+legal/
+lib/
+node_modules/
+release

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es"> <head> <title>Candidatos de T&eacute;rminos</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+
+    <div id="container" class="divContainer" style="height: 500px;">
+        <table id="candidatesTable" class="fill_width alternate">
+
+        </table>
+    </div>
+
+    <div id="buttonArea" class="buttonArea">
+        <input type="checkbox" id="openResult" checked>
+        <label for="openResult" class="noWrap">Abrir el glosario generado</label>
+        <span class="fill_width">&nbsp;</span>
+        <button id="removeSelected">Eliminar Seleccionado</button> <button id="save">Guardar Glosario</button>
+    </div>
+
+    <script>
+        const { CandidatesViewer } = require('../../js/candidatesViewer.js');
+        new CandidatesViewer();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es"> <head> <title>Informaci&oacute;n del Sistema</title>
+    <link id="theme" rel="stylesheet" type="text/css" href="../../css/light.css">
+    <link rel="stylesheet" type="text/css" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+    <div class="paddedArea">
+        <table class="fill_width">
+            <tr class="noWrap">
+                <td>Anchovy</td>
+                <td id="anchovy"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>OpenXLIFF Filters</td>
+                <td id="openxliff"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>XMLJava</td>
+                <td id="xmljava"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>BCP47J</td>
+                <td id="bcp47j"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>Java SE</td>
+                <td id="java"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>Electron</td>
+                <td id="electron"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>TypesBCP47</td>
+                <td id="typesbcp47"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>TypesExcel</td>
+                <td id="typesexcel"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>TypesTerms</td>
+                <td id="typesterms"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>TypesXLIFF</td>
+                <td id="typesxliff"></td>
+            </tr>
+            <tr class="noWrap">
+                <td>TypesXML</td>
+                <td id="typesxml"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const { SystemInfo } = require('../../js/systemInfo.js');
+        new SystemInfo();
+    </script>
+</body>
+
+</html>

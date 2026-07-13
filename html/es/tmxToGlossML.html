@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es"> <head> <title>Convertir TMX a GlossML</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+    <table class="fill_width">
+        <tr>
+            <td class="noWrap middle"><label for="tmxFile">Archivo TMX</label></td>
+            <td class="fill_width middle"><input id="tmxFile" type="text" class="fill_width" readonly></td>
+            <td class="middle"><button id="browseTmx">Examinar...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="glossmlFile">Archivo GlossML</label></td>
+            <td class="fill_width middle"><input id="glossmlFile" type="text" class="fill_width" readonly></td>
+            <td class="middle"><button id="browseGlossml">Examinar...</button></td>
+        </tr>
+    </table>
+    <div class="buttonArea">
+        <input type="checkbox" id="openResult" checked>
+        <label for="openResult">Abrir el glosario generado</label>
+        <button id="convertButton">Convertir TMX a GlossML</button>
+    </div>
+    <script>
+        const { TmxToGlossML } = require('../../js/tmxToGlossML.js');
+        new TmxToGlossML();
+    </script>
+</body>
+
+</html>

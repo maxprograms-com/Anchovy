@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracci&oacute;n de T&eacute;rminos</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+        <table class="fill_width">
+            <tr>
+                <td class="noWrap middle"><label for="sourceFile">Archivo de origen</label></td>
+                <td class="fill_width middle"><input id="sourceFile" type="text" class="fill_width"></td>
+                <td class="middle"><button id="browseSource">Examinar...</button></td>
+            </tr>
+            <tr>
+                <td class="noWrap middle"><label for="glossmlFile">Archivo GlossML</label></td>
+                <td class="fill_width middle"><input id="glossmlFile" type="text" class="fill_width"></td>
+                <td class="middle"><button id="browseGlossml">Examinar...</button></td>
+            </tr>
+            <tr>
+                <td class="noWrap middle"><label for="sourceSelect">Idioma Origen</label></td>
+                <td class="fill_width" colspan="2"><select id="sourceSelect" class="table_select"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="noWrap middle"><label for="typeSelect">Tipo de archivo</label></td>
+                <td class="fill_width middle" colspan="2"><select id="typeSelect" class="table_select"></select></td>
+            </tr>
+            <tr>
+                <td class="noWrap middle"><label for="charsetSelect">Juego de caracteres</label></td>
+                <td class="fill_width middle" colspan="2"><select id="charsetSelect" class="table_select"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="noWrap middle"><label for="frequency">Frecuencia M&iacute;nima</label></td>
+                <td class=" middle"><input id="frequency" type="number" class="fill_width" value="3" min="1"></td>
+            </tr>
+            <tr>
+                <td class="noWrap middle"><label for="termLength">Longitud M&aacute;xima del T&eacute;rmino</label></td>
+                <td class=" middle"><input id="termLength" type="number" class="fill_width" value="3" min="1"></td>
+            </tr>
+        </table>
+    <div class="buttonArea">
+        <span class="fill_width">&nbsp;</span>
+        <button id="extractTermsButton">Extraer Candidatos</button>
+    </div>
+    <script>
+        const { ExtractTerms } = require('../../js/extractTerms.js');
+        new ExtractTerms();
+    </script>
+</body>
+
+</html>

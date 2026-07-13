@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es"> <head> <title>Convertir Excel a GlossML</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+    <table class="fill_width">
+        <tr>
+            <td class="noWrap middle"><label for="excelFile">Archivo Excel</label></td>
+            <td class="fill_width middle"><input id="excelFile" type="text" class="fill_width" readonly></td>
+            <td class="middle"><button id="browseExcel">Examinar...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="glossmlFile">Archivo GlossML</label></td>
+            <td class="fill_width middle"><input id="glossmlFile" type="text" class="fill_width" readonly></td>
+            <td class="middle"><button id="browseGlossml">Examinar...</button></td>
+        </tr>
+    </table>
+    <table class="fill_width">
+        <tr>
+            <td class="middle noWrap"><label for="sheetSelect">Hoja</label></td>
+            <td class="middle fill_width"><select id="sheetSelect" class="table_select"></select></td>
+        </tr>
+        <tr>
+            <td class="middle noWrap"><label for="sourceLanguage">Idioma Origen</label></td>
+            <td class="middle fill_width"><select id="sourceLanguage" class="table_select"></select></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="middle">
+                <input type="checkbox" id="hasHeaderRow" checked>
+                <label for="hasHeaderRow">La primera fila contiene los encabezados de columna</label>
+            </td>
+        </tr>
+    </table>
+    <div id="mappingScroll" style="max-height: 260px; overflow: auto;">
+        <table class="stripes" id="mappingTable">
+            <thead>
+                <tr id="columnHeaderRow"></tr>
+            </thead>
+            <tbody>
+                <tr id="typeRow"></tr>
+                <tr id="langRow"></tr>
+            </tbody>
+            <tbody id="previewBody"></tbody>
+        </table>
+    </div>
+    <div class="buttonArea">
+        <input type="checkbox" id="openResult" checked>
+        <label for="openResult">Abrir el glosario generado</label>
+        <button id="importButton">Convertir Excel a GlossML</button>
+    </div>
+    <script>
+        const { ImportExcel } = require('../../js/importExcel.js');
+        new ImportExcel();
+    </script>
+</body>
+
+</html>

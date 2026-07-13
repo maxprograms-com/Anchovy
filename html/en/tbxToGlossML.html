@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Convert TBX to GlossML</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+    <table class="fill_width">
+        <tr>
+            <td class="noWrap middle"><label for="tbxFile">TBX File</label></td>
+            <td class="fill_width middle"><input id="tbxFile" type="text" class="fill_width" readonly></td>
+            <td class="middle"><button id="browseTbx">Browse...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="glossmlFile">GlossML File</label></td>
+            <td class="fill_width middle"><input id="glossmlFile" type="text" class="fill_width" readonly></td>
+            <td class="middle"><button id="browseGlossml">Browse...</button></td>
+        </tr>
+    </table>
+    <div class="buttonArea">
+        <input type="checkbox" id="openResult" checked>
+        <label for="openResult">Open generated glossary</label>
+        <button id="convertButton">Convert TBX to GlossML</button>
+    </div>
+    <script>
+        const { TbxToGlossML } = require('../../js/tbxToGlossML.js');
+        new TbxToGlossML();
+    </script>
+</body>
+
+</html>

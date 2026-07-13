@@ -1,0 +1,34 @@
+{
+  "name": "anchovy",
+  "productName": "Anchovy",
+  "version": "2.0.0",
+  "description": "Anchovy - Glossary Management Application",
+  "main": "js/app.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && electron ."
+  },
+  "keywords": [
+    "glossary",
+    "translation"
+  ],
+  "author": {
+    "name": "Rodolfo M. Raya",
+    "url": "https://maxprograms.com",
+    "email": "rmraya@maxprograms.com"
+  },
+  "license": "EPL-1.0",
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "electron": "^43.1.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "typesbcp47": "^1.24.1",
+    "typesexcel": "^1.0.1",
+    "typesterms": "^1.3.1",
+    "typesxliff": "^1.2.1",
+    "typesxml": "^2.2.1"
+  }
+}

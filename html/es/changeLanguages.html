@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es"> <head> <title>Cambiar Idioma</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+
+    <table class="fill_width">
+        <tr>
+            <td class="noWrap middle"><label for="oldLanguage">Idioma Actual</label></td>
+            <td class="fill_width middle">
+                <select id="oldLanguage" class="table_select"></select>
+            </td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="newLanguage">Nuevo Idioma</label></td>
+            <td class="fill_width middle">
+                <select id="newLanguage" class="table_select"></select>
+            </td>
+        </tr>
+    </table>
+
+    <div class="buttonArea">
+        <button id="save">Cambiar Idioma</button>
+    </div>
+
+    <script>
+        const { changeLanguages } = require('../../js/changeLanguages.js');
+        new changeLanguages();
+    </script>
+</body>
+
+</html>

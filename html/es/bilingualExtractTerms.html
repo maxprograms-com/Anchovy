@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracci&oacute;n de T&eacute;rminos Biling&uuml;es</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+    <table class="fill_width">
+        <tr>
+            <td class="noWrap middle"><label for="xliffFile">Archivo XLIFF</label></td>
+            <td class="fill_width middle"><input id="xliffFile" type="text" class="fill_width"></td>
+            <td class="middle"><button id="browseXliff">Examinar...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="glossmlFile">Archivo GlossML</label></td>
+            <td class="fill_width middle"><input id="glossmlFile" type="text" class="fill_width"></td>
+            <td class="middle"><button id="browseGlossml">Examinar...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="frequency">Frecuencia M&iacute;nima</label></td>
+            <td class="middle"><input id="frequency" type="number" class="fill_width" value="3" min="1"></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="termLength">Longitud M&aacute;xima del T&eacute;rmino</label></td>
+            <td class="middle"><input id="termLength" type="number" class="fill_width" value="5" min="1"></td>
+        </tr>
+    </table>
+    <div class="buttonArea">
+        <span class="fill_width">&nbsp;</span>
+        <button id="extractBilingualButton">Extraer Candidatos</button>
+    </div>
+    <script>
+        const { BilingualExtractTerms } = require('../../js/bilingualExtractTerms.js');
+        new BilingualExtractTerms();
+    </script>
+</body>
+
+</html>

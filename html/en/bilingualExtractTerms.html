@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Term Extraction</title>
+    <link rel="stylesheet" id="theme" href="../../css/light.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+</head>
+
+<body class="dialogBody">
+    <table class="fill_width">
+        <tr>
+            <td class="noWrap middle"><label for="xliffFile">XLIFF File</label></td>
+            <td class="fill_width middle"><input id="xliffFile" type="text" class="fill_width"></td>
+            <td class="middle"><button id="browseXliff">Browse...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="glossmlFile">GlossML File</label></td>
+            <td class="fill_width middle"><input id="glossmlFile" type="text" class="fill_width"></td>
+            <td class="middle"><button id="browseGlossml">Browse...</button></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="frequency">Minimum Frequency</label></td>
+            <td class="middle"><input id="frequency" type="number" class="fill_width" value="3" min="1"></td>
+        </tr>
+        <tr>
+            <td class="noWrap middle"><label for="termLength">Maximum Term Length</label></td>
+            <td class="middle"><input id="termLength" type="number" class="fill_width" value="5" min="1"></td>
+        </tr>
+    </table>
+    <div class="buttonArea">
+        <span class="fill_width">&nbsp;</span>
+        <button id="extractBilingualButton">Extract Candidates</button>
+    </div>
+    <script>
+        const { BilingualExtractTerms } = require('../../js/bilingualExtractTerms.js');
+        new BilingualExtractTerms();
+    </script>
+</body>
+
+</html>
