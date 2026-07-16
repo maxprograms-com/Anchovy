@@ -57,10 +57,11 @@ export class BilingualCandidatesViewer {
         let header: HTMLTableSectionElement = table.createTHead();
         let headerRow: HTMLTableRowElement = header.insertRow();
         let headers: string[] = lines[0].split(',');
-        headers.unshift(' '); // For checkbox column
+        headers.unshift('\u00A0'); // For checkbox column
         for (let colHeader of headers) {
             let th: HTMLTableCellElement = document.createElement('th');
             th.innerText = colHeader;
+            th.classList.add('noWrap');
             headerRow.appendChild(th);
         }
         header.appendChild(headerRow);

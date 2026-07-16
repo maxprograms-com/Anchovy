@@ -62,12 +62,6 @@ class Anchovy {
     pendingExcelSheets: ExcelSheetData[] = [];
     pendingCsvFile: string = '';
 
-    // subscriptions
-
-    newSubscriptionWindow: BrowserWindow | null = null;
-    registerExpiredWindow: BrowserWindow | null = null;
-    registerSubscriptionWindow: BrowserWindow | null = null;
-    requestEvaluationWindow: BrowserWindow | null = null;
 
     static appLang: string = 'en';
     static i18n: I18n;
@@ -1795,6 +1789,9 @@ class Anchovy {
     }
 
     changeLanguages(): void {
+        if (!this.model) {
+            return;
+        }
         this.changeLanguagesWindow = new BrowserWindow({
             parent: this.mainWindow,
             width: 400,
@@ -2786,15 +2783,6 @@ class Anchovy {
             languages: languages.trim(),
             termCount: numEntries,
             comment: comment
-        });
-    }
-
-    showStore(): void {
-        shell.openExternal('https://maxprograms.com/store/buy.html').catch((reason: any) => {
-            if (reason instanceof Error) {
-                console.error(reason.message);
-            }
-            dialog.showErrorBox(Anchovy.i18n.getString('Anchovy', 'error'), Anchovy.i18n.getString('Anchovy', 'unableToOpenStore'));
         });
     }
 }
