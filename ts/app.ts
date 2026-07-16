@@ -62,6 +62,13 @@ class Anchovy {
     pendingExcelSheets: ExcelSheetData[] = [];
     pendingCsvFile: string = '';
 
+    // subscriptions
+
+    newSubscriptionWindow: BrowserWindow | null = null;
+    registerExpiredWindow: BrowserWindow | null = null;
+    registerSubscriptionWindow: BrowserWindow | null = null;
+    requestEvaluationWindow: BrowserWindow | null = null;
+
     static appLang: string = 'en';
     static i18n: I18n;
 
