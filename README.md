@@ -16,8 +16,8 @@ Anchovy is a cross-platform glossary editor built around [GlossML](https://maxpr
 - **GlossML** — Anchovy's native format: a compact XML vocabulary (6 elements, 4 attributes) for storing glossary data. Not intended for full terminology exchange, but simple enough to be trivial to generate, parse and version.
 - **CSV** — with configurable character set, column separator and text delimiter, and a column-by-column preview for mapping columns to Skip/Comment/Term/Definition roles.
 - **Excel (.xlsx)** — same column-mapping workflow as CSV, with worksheet selection.
-- **TMX** (Translation Memory eXchange) — import only.
-- **TBX** (TermBase eXchange, ISO 30042) — import only.
+- **TMX** (Translation Memory eXchange) — import and export.
+- **TBX** (TermBase eXchange, ISO 30042) — import and export.
 - **HTML** — export only, for sharing or printing a glossary.
 
 ## Requirements
