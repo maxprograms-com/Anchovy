@@ -514,7 +514,13 @@ class Anchovy {
         this.mainWindow.on('close', (event: Electron.Event) => {
             if (this.model && !this.closeFile()) {
                 event.preventDefault();
+                return;
             }
+            this.mainWindow.getChildWindows().forEach((window: BrowserWindow) => {
+                if (!window.isDestroyed()) {
+                    window.close();
+                }
+            });
         });
         this.mainWindow.once('ready-to-show', () => {
             this.mainWindow?.show();
