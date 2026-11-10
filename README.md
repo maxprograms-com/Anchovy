@@ -68,3 +68,9 @@ Subscription version includes direct email support at [tech@maxprograms.com](mai
 | Signed Windows installer | No | Yes |
 | Restricted features | None | None |
 | Technical support | Peer support at <https://groups.io/g/maxprograms/> | Email + peer support |
+
+---
+
+## Legal
+
+License information for all included components is available in the [licenses](./licenses) directory.
