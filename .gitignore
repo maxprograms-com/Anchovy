@@ -9,7 +9,8 @@ include/
 js/
 legal/
 lib/
-licenses/
+licenses/*
+!licenses/README.md
 node_modules/
 srx/
 xmlfilter/
